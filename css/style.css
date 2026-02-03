@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  }
+
+/****************   Nav Section **********************/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+	background-color: blueviolet;
+  color: white;
+  padding: 16px 32px;
+  
+  
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+/***********************  Footer Section   **************************/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+	background-color: violet;
+  color:bisque;
+  text-align: center;
+  padding: 24px;
+  
+}
+
+
+/*********** Splash Page ************************/
+header {
+min-height: 60vh;                 /* big splash area */
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b
+  );
+  color: whitesmoke;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 32px;
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif; 
+  color: #38bdf8;                     
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+
+header img {
+  border-radius: 50%;
+  border: 4px solid black;
+}
+
+.address {
+  font-style: italic;
+  color: black
+}
+
+.tagline {
+  font-style: italic;
+  color: black
+}
+
+/************* Sections ********************/
+hr {
+
+}
+
+section h3 {
+  font-family: 'Poppins', sans-serif; 
+  color: #38bdf8;                     
+  
+}
+
+section dl {
+  display: grid;
+  
+}
+
+section ul {
+
+}
+
+section a {
+  color: #38bdf8; /* hex code for link color */
+  text-decoration: none; /* optional: removes underline */
+}
+
+section a:hover {
+  color: #0ea5e9; /* slightly darker / hover effect */
+}
+
+/**************   Projects   *****************/
+.three-col {
+	display: grid;                       /* make it a grid container */
+  grid-template-columns: repeat(3, 1fr); /* three equal columns */
+  gap: 16px;                         /* horizontal and vertical space between cards */
+  margin-top: 32px;  
+}
+.card img {
+  width: 100%;   
+   height: auto;
+   margin-bottom: 16px;
+}
+
+.card {
+  background-color: aquamarine;
+  color: black;
+  
+
+}
+
+/**************   Responsiveness   *****************/
+@media (max-width: 680px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px;
+    }
+
+    .three-col {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+}
+
+/**************   Contact Page   *****************/
+.one-col {
+  display: flex;                  
+  flex-direction: column;
+  align-items: center; 
+}
+
+input {
+   width: 100%;                    
+  padding: 12px;
+
+}
+
+textarea {
+   width: 100%;
+  padding: 12px;
+   
+}
