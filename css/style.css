@@ -39,7 +39,7 @@ footer {
 
 /*********** Splash Page ************************/
 header {
-min-height: 60vh;                 /* big splash area */
+min-height: 60vh;                 
   background: linear-gradient(
     135deg,
     #0f172a,
@@ -70,11 +70,15 @@ header img {
 }
 
 .address {
+  display: flex;
+  justify-content: center;
   font-style: italic;
   color: black
 }
 
 .tagline {
+  display: flex;
+  justify-content: center;
   font-style: italic;
   color: black
 }
@@ -83,36 +87,47 @@ header img {
 hr {
 
 }
-
+section h2 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif; 
+  color: #38bdf8;
+}
 section h3 {
+  display: flex;
+  justify-content: center;
   font-family: 'Poppins', sans-serif; 
   color: #38bdf8;                     
   
 }
 
 section dl {
+  display: flex;
+  justify-content: center;
   display: grid;
   
 }
 
 section ul {
-
+display: flex;
+  justify-content: center;
+  display: grid;
 }
 
 section a {
-  color: #38bdf8; /* hex code for link color */
-  text-decoration: none; /* optional: removes underline */
+  color: #38bdf8; 
+  text-decoration: none; 
 }
 
 section a:hover {
-  color: #0ea5e9; /* slightly darker / hover effect */
+  color: #0ea5e9; 
 }
 
 /**************   Projects   *****************/
 .three-col {
-	display: grid;                       /* make it a grid container */
-  grid-template-columns: repeat(3, 1fr); /* three equal columns */
-  gap: 16px;                         /* horizontal and vertical space between cards */
+	display: grid;                       
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 16px;                         
   margin-top: 32px;  
 }
 .card img {
