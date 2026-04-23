@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  }
+  background-color: #f5f7fa; /* light neutral background */
+  color: #1f2933; /* dark slate text */
+}
 
 /****************   Nav Section **********************/
 nav {
@@ -8,19 +10,25 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-	background-color: blueviolet;
-  color: white;
+  background-color: #1e3a5f; /* deep GIS-style blue */
+  color: #ffffff;
   padding: 16px 32px;
-  
-  
 }
 
 nav a {
-  color: white;
+  color: #e0f2fe; /* soft blue */
   text-decoration: none;
   font-weight: 500;
 }
 
+nav a:hover {
+  color: #7dd3fc; /* lighter accent */
+}
+.nav-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
 
 /***********************  Footer Section   **************************/
 footer {
@@ -28,24 +36,21 @@ footer {
   justify-content: center;
   align-items: center;
 
-
-	background-color: violet;
-  color:bisque;
+  background-color: #111827; /* dark footer */
+  color: #9ca3af; /* muted gray text */
   text-align: center;
   padding: 24px;
-  
 }
-
 
 /*********** Splash Page ************************/
 header {
-min-height: 60vh;                 
+  min-height: 60vh;                 
   background: linear-gradient(
     135deg,
-    #0f172a,
-    #1e293b
+    #0f172a,  /* dark navy */
+    #1e3a5f   /* muted blue */
   );
-  color: whitesmoke;
+  color: #e5e7eb;
 
   display: flex;
   flex-direction: column;
@@ -58,103 +63,196 @@ min-height: 60vh;
 
 header h1 {
   font-family: 'Poppins', sans-serif; 
-  color: #38bdf8;                     
+  color: #38bdf8; /* clean GIS accent blue */
   font-size: 48px;
   margin-bottom: 16px;
 }
 
-
 header img {
   border-radius: 50%;
-  border: 4px solid black;
+  border: 3px solid #374151; /* subtle border */
 }
 
-.address {
-  display: flex;
-  justify-content: center;
-  font-style: italic;
-  color: black
-}
-
+.address,
 .tagline {
   display: flex;
   justify-content: center;
-  font-style: italic;
-  color: black
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* clean + professional */
+  font-style: normal; /* remove italic */
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #94a3b8; /* muted slate */
+  margin-top: 6px;
 }
 
 /************* Sections ********************/
-hr {
+section {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
 
+  padding: 16px 20px;   /* smaller than before */
+  margin: 16px auto;    /* tighter spacing */
+
+  width: 90%;
+  max-width: 700px;     /* smaller container */
+  box-sizing: border-box;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
-section h2 {
+section:has(.three-col) {
+  max-width: 1100px;   /* allow projects to be wider */
+}
+#resume {
   display: flex;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif; 
-  color: #38bdf8;
+  flex-direction: column;
+  align-items: center;
 }
+.resume-frame {
+  width: 100%;
+  height: 600px;              /* controls scroll window height */
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.resume-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* button */
+.resume-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  background: #1d4ed8;
+}
+
+/* modal overlay */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* modal box */
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  width: 80%;
+  height: 80%;
+
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* iframe */
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10;
+}
+section h2,
 section h3 {
   display: flex;
   justify-content: center;
   font-family: 'Poppins', sans-serif; 
-  color: #38bdf8;                     
-  
+  color: #1e3a5f; /* consistent heading color */
 }
 
-section dl {
-  display: flex;
-  justify-content: center;
-  display: grid;
-  
-}
-
+section dl,
 section ul {
-display: flex;
-  justify-content: center;
   display: grid;
+  justify-content: center;
 }
-
+dl, ul {
+  width: 100%;
+  max-width: 700px;
+}
 section a {
-  color: #38bdf8; 
+  color: #2563eb; /* professional blue */
   text-decoration: none; 
 }
 
 section a:hover {
-  color: #0ea5e9; 
+  color: #1d4ed8; 
 }
-
+section .three-col {
+  width: 100%;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e5e7eb;
+  width: 80%;
+  margin: 24px auto;
+}
+.card {
+  width: 100%;
+  box-sizing: border-box;
+}
 /**************   Projects   *****************/
 .three-col {
-	display: grid;                       
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 16px;                         
-  margin-top: 32px;  
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
+
 .card img {
   width: 100%;   
-   height: auto;
-   margin-bottom: 16px;
+  height: auto;
+  margin-bottom: 16px;
 }
 
 .card {
-  background-color: aquamarine;
-  color: black;
-  
-
+  background-color: #ffffff; /* clean card */
+  color: #1f2933;
+  border: 1px solid #e5e7eb; /* subtle border */
+  border-radius: 8px;
+  padding: 16px;
 }
 
 /**************   Responsiveness   *****************/
 @media (max-width: 680px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 16px;
-    }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
 
-    .three-col {
-      grid-template-columns: 1fr;
-      justify-items: center;
-    }
+  .three-col {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 /**************   Contact Page   *****************/
@@ -164,14 +262,10 @@ section a:hover {
   align-items: center; 
 }
 
-input {
-   width: 100%;                    
-  padding: 12px;
-
-}
-
+input,
 textarea {
-   width: 100%;
+  width: 100%;                    
   padding: 12px;
-   
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
 }

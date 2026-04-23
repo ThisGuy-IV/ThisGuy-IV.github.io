@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Patrick John Martin</title>
 </head>
+
 <body>
      
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,6 +15,7 @@
     <nav>
         <p>Patrick John Martin</p>
         <p><a href="contact.html">Contact Patrick John Martin</a></p>
+        <a href="resume.pdf" target="_blank">Resume</a>
 </nav>
    <header>
         <h1>Patrick John Martin</h1>
@@ -26,6 +28,24 @@
 
 
     <hr>
+    <section id="resume">
+  <h2>Resume</h2>
+
+  <button id="openResume" class="resume-btn">
+    View Resume
+  </button>
+</section>
+
+<!-- POPUP MODAL -->
+<div id="resumeModal" class="modal">
+  <div class="modal-content">
+    
+    <span class="close">&times;</span>
+
+    <iframe src="resume.pdf"></iframe>
+
+  </div>
+</div>
     <section>
         <h2>Education</h2>
         <dl>
@@ -73,20 +93,22 @@
         <img src ="images/TrainingCenter.jpg" width = "150" height = "150" alt ="training center">
         <ul>
             <li>Built in ArcGIS Pro</li>
-            <li>Utilizes various spatial analysis tools</li>
+            <li>Utilizes Buffers, Spatial Joins, and other spatial analysis tools to build a training facility based off of requirements</li>
+
         </ul>
         </div>
         <div class="card"><h3> Nighttime Population and Hospital Service Areas</h3>
         <img src ="images/HospitalServiceArea.jpg" width = "150" height = "150" alt ="hospital service areas">
         <ul>
             <li>Built in ArcGIS Pro</li>
-            <li>Utilizes various spatial analysis tools</li>
+            <li>Use of various spatial analysis techniques to determine best hospital area using Thiessen Polygons and Buffers </li>
         </ul></div>
         <div class="card"> <h3> Athens Clark County Crash/Hot Spot Map</h3>
         <img src ="images/HotSpotMap.jpg" width = "150" height = "150" alt ="hotspot map">
         <ul>
             <li>Built in ArcGIS Pro</li>
-            <li>Utilizes spatial joins, buffers, and other spatial analysis tools</li>
+            <li>Use of various spatial analysis techniques to create a crash hot spot zone map for Athens Clarke County</li>
+            <li>Uses an extensive, 8+ spatial analysis model builder in ArcGIS Pro</li>
         </ul></div>
         </div>
     </section>
@@ -95,5 +117,24 @@
         <a href = "https://www.linkedin.com/in/patrick-john-martin-iv" target = "_blank">  <i class="fa-brands fa-linkedin"></i></a>
     </footer>
 </body>
+<script>
+  const modal = document.getElementById("resumeModal");
+  const btn = document.getElementById("openResume");
+  const close = document.querySelector(".close");
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  close.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
 </html>
 
